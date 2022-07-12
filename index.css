@@ -1,0 +1,164 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 550px;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------HEADER */
+
+.container, .movies_container {
+    width: 90%;
+    margin: 0 auto;
+}
+header {
+    background-image: url("images/headerImage.png");
+    background-color: black;
+}
+
+header, header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-title{
+    padding: 15% 0 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ----------------------------------------------SEARCH BAR */
+#search-bar {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    transform: translateY(50%);
+}
+
+#search-bar input {
+    width: 70%;
+    border: none;
+    
+}
+#search-bar button {
+    width: 30%;
+    border: none;
+    border-left: 1px solid #D1D5DB;
+    border-radius: 0 6px 6px 0;
+}
+
+#search-bar::before {
+    content: url("images/searchIcon.svg");
+    padding: 0.5em;
+}
+
+#search-bar button:hover {
+    background: #DFDDDD;
+}
+
+/* ----------------------------------------------MAIN */
+
+main{
+    background: whitesmoke;
+    padding-top: 3em;
+}
+
+.blankpage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #DFDDDD;
+    font-weight: 700;
+    font-size: 18px;
+    height: 40vh;
+}
+
+.blankpage-content a {
+    color: black;
+    text-decoration: none;
+}
+
+.blankpage-content a::before {
+    content: url("images/addIcon.svg");
+    position: absolute;
+    transform: translate(-1.1em, 0.1em);
+}
+
+/* ---------------------------------FOUND MOVIE ELEMENT */
+.movie-element {
+    border-bottom: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+    padding: 1.5em 0;
+}
+
+.movie-font {
+    font-size: 12px;
+}
+
+.plot {
+    color: #6B7280;
+}
+
+.movie-poster {
+    width: 100px;
+    height: 150px;
+}
+
+.movie-element-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.movie-element-description h4, div p {
+    margin: 0.5em 1em;
+}
+
+#rating-star::before {
+    content: url("images/rateStarIcon.svg");
+    position: absolute;
+    transform: translate(-1.4em,-0.1em);
+}
+
+/* ----------------------------ADD/DELETE MOVIE ELEMENT BUTTON */
+
+#addWatchlistBtn, #removeWatchlistBtn {
+    border: none;
+    background: inherit;
+    margin-left: 2em;
+}
+
+#addWatchlistBtn::before {
+    content: url("images/addIcon.svg");
+    position: absolute;
+    transform: translate(-1.8em,-0.2em);
+}
+#removeWatchlistBtn::before {
+    content: url("images/removeIcon.svg");
+    position: absolute;
+    transform: translate(-1.8em,-0.2em);
+}
+
+/* ---------------------------------READ MORE/LESS PLOT BUTTON */
+
+.moreLessBtn{
+    display: inline;
+    border: none;
+    background: inherit;
+    padding: 0;
+}
+
+#addWatchlistBtn:hover, #removeWatchlistBtn:hover, .moreLessBtn:hover {
+    border-bottom: 1px solid black;
+    /* text-decoration: underline; */
+
+}
